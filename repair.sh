@@ -3,6 +3,8 @@
 for f in $(find "$1" -maxdepth 10 -type f -name '*.mp4') 
 do 
   echo "Repairing $f"
+  
+  unset moovoffset
 
   if [[ "$f" == *kh015.mp4 ]]
   then
