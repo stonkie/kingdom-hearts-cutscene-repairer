@@ -4,9 +4,13 @@
 
 However, there is a problem... The cutscenes don't work!
 
+# Current situation
+
+The MP4 cutscenes are corrupted. I managed to repair a good portion of them, but they only play with VLC or some other player. They **will not play within the game**, I believe because of this issue (I get the same arch issues with gstreamer looking for avcodec libs) : https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues/1291
+
 My current script repairs about half of the cutscenes. Use the -clean flag to delete the remaining broken files and allow the games to at least play those that are repaired (take a backup).
 
-I do intend on working to fix the remaining half... Keep reading!
+I do intend on working to fix the remaining half by improving on a relatively generic MP4 repair tool. I might see what I can do about making them play within the game after that...
 
 ## How to run
 
