@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for f in $(find "$1" -maxdepth 1 -type f -name '*.mp4'); 
+for f in $(find "$1" -maxdepth 10 -type f -name '*.mp4') 
 do 
   echo "Repairing $f"
 
