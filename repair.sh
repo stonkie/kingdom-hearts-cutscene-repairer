@@ -15,6 +15,18 @@ do
   elif [[ "$f" == *kh150.mp4 ]]    
   then
     echo "File $f is filtered out"
+  elif [[ "$f" == *kd803.mp4 ]]    
+    then
+      echo "File $f is filtered out"
+  elif [[ "$f" == *opn.mp4 ]]    
+      then
+        echo "File $f is filtered out"
+  elif [[ "$f" == *zz_event_084.mp4 ]]    
+        then
+          echo "File $f is filtered out"
+  elif [[ "$f" == *zz_event_140.mp4 ]]    
+          then
+            echo "File $f is filtered out"
   else
     moovoffset=$(grep --only-matching --byte-offset --max-count=1 -a -o --perl-regexp "\x6D\x6F\x6F\x76" "$f" | grep -oP '^\d+' -m 1)    
     echo "moovoffset=$moovoffset"
