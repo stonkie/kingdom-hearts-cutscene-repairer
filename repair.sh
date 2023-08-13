@@ -1,11 +1,22 @@
 #!/usr/bin/env bash
 
-for f in $(find "$1" -maxdepth 10 -type f -name '*.mp4'); 
+for f in $(find "$1" -maxdepth 1 -type f -name '*.mp4'); 
 do 
   echo "Repairing $f"
 
-  moovoffset=$(grep --only-matching --byte-offset --max-count=1 -a -o --perl-regexp "\x6D\x6F\x6F\x76" "$f" | grep -oP '^\d+' -m 1)
-  echo "moovoffset=$moovoffset"
+  if [[ "$f" == *kh015.mp4 ]]
+  then
+    echo "File $f is filtered out"
+  elif [[ "$f" == *kh027.mp4 ]]
+  then
+    echo "File $f is filtered out"
+  elif [[ "$f" == *kh150.mp4 ]]    
+  then
+    echo "File $f is filtered out"
+  else
+    moovoffset=$(grep --only-matching --byte-offset --max-count=1 -a -o --perl-regexp "\x6D\x6F\x6F\x76" "$f" | grep -oP '^\d+' -m 1)    
+    echo "moovoffset=$moovoffset"
+  fi
 
   if [ -z "$moovoffset" ]
   then
