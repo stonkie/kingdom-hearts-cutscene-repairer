@@ -11,7 +11,7 @@ I do intend on working to fix the remaining half... Keep reading!
 ## How to run
 
 1. Open Desktop Mode (if you're not using a SteamDeck, just turn ON the Linux box :) )
-1. Copy the repair.sh file from this repository into the `/home/deck/Games/Heroic/KH_1.5_2.5/EPIC` directory. 
+1. Copy the [repair.sh](https://github.com/stonkie/kingdom-hearts-cutscene-repairer/blob/main/repair.sh) file from this repository into the `/home/deck/Games/Heroic/KH_1.5_2.5/EPIC` directory. 
 1. You may want to make a backup copy of the EPIC directory just in case. 
 1. Tun the following command `./repair.sh . -clean`
 
